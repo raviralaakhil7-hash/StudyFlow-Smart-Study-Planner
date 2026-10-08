@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Study Planner</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="background-circle circle-one"></div>
+    <div class="background-circle circle-two"></div>
+
+    <main class="app-container">
+
+        <header class="top-header">
+
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div>
+                    <h1>StudyFlow</h1>
+                    <p>Smart Study Planner</p>
+                </div>
+            </div>
+
+            <div class="header-date">
+                <i class="fa-regular fa-calendar"></i>
+                <span id="currentDate">Today</span>
+            </div>
+
+        </header>
+
+        <section class="welcome-section">
+
+            <div>
+                <p class="small-heading">WELCOME BACK 👋</p>
+
+                <h2>
+                    Plan your study.
+                    <span>Achieve your goals.</span>
+                </h2>
+
+                <p class="welcome-text">
+                    Organize your study tasks and stay focused on what matters.
+                </p>
+            </div>
+
+            <div class="focus-card">
+
+                <div class="focus-icon">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+
+                <div>
+                    <span>Today's Focus</span>
+                    <strong id="focusText">Let's get started!</strong>
+                </div>
+
+            </div>
+
+        </section>
+       <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+
+                <div>
+                    <p>Total Tasks</p>
+                    <h3 id="totalTasks">0</h3>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <p>Completed</p>
+                    <h3 id="completedTasks">0</h3>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <div>
+                    <p>Pending</p>
+                    <h3 id="pendingTasks">0</h3>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div>
+                    <p>Progress</p>
+                    <h3 id="progressPercent">0%</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="add-task-section">
+
+            <div class="section-title">
+
+                <div>
+                    <p class="small-heading">ORGANIZE</p>
+                    <h2>Add New Study Task</h2>
+                </div>
+
+                <i class="fa-solid fa-pen-to-square"></i>
+
+            </div>
+
+
+            <form id="taskForm">
+
+                <div class="form-group">
+
+                    <label for="taskInput">
+                        Task Name
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-book"></i>
+
+                        <input
+                            type="text"
+                            id="taskInput"
+                            placeholder="e.g. Complete JavaScript chapter"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="subjectInput">
+                            Subject
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            <select id="subjectInput">
+
+                                <option value="JavaScript">
+                                    JavaScript
+                                </option>
+
+                                <option value="Python">
+                                    Python
+                                </option>
+
+                                <option value="Java">
+                                    Java
+                                </option>
+
+                                <option value="Web Development">
+                                    Web Development
+                                </option>
+
+                                <option value="Database">
+                                    Database
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="priorityInput">
+                            Priority
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-flag"></i>
+
+                            <select id="priorityInput">
+
+                                <option value="Low">
+                                    Low
+                                </option>
+
+                                <option value="Medium" selected>
+                                    Medium
+                                </option>
+
+                                <option value="High">
+                                    High
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="dateInput">
+                            Due Date
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <input
+                                type="date"
+                                id="dateInput"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="add-btn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Study Task
+
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="tasks-section">
+
+            <div class="tasks-header">
+
+                <div>
+                    <p class="small-heading">YOUR PLAN</p>
+                    <h2>Study Tasks</h2>
+                </div>
+
+                <span id="taskCount" class="task-count">
+                    0 Tasks
+                </span>
+
+            </div>
+
+            <div class="controls">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search tasks..."
+                    >
+
+                </div>
+
+
+                <select id="filterInput">
+
+                    <option value="all">
+                        All Tasks
+                    </option>
+
+                    <option value="pending">
+                        Pending
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                    <option value="High">
+                        High Priority
+                    </option>
+
+                    <option value="Medium">
+                        Medium Priority
+                    </option>
+
+                    <option value="Low">
+                        Low Priority
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div id="taskList" class="task-list">
+
+            </div>
+
+            <div id="emptyState" class="empty-state">
+
+                <div class="empty-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+
+                <h3>No study tasks yet</h3>
+
+                <p>
+                    Add your first task and start planning your study session.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="progress-section">
+
+            <div class="progress-header">
+
+                <div>
+                    <p class="small-heading">YOUR PROGRESS</p>
+                    <h2>Study Completion</h2>
+                </div>
+
+                <strong id="progressText">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    id="progressBar"
+                    class="progress-fill"
+                ></div>
+
+            </div>
+
+            <p id="progressMessage">
+                Start completing tasks to see your progress.
+            </p>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                <i class="fa-solid fa-graduation-cap"></i>
+                StudyFlow
+            </p>
+
+            <span>
+                Learn • Plan • Achieve
+            </span>
+
+        </footer>
+
+    </main>
+
+    <div id="toast" class="toast">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span id="toastMessage">
+            Task added successfully!
+        </span>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
